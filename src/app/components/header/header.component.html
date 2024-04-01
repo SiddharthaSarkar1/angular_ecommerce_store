@@ -1,0 +1,15 @@
+<mat-toolbar class="max-w-full mx-auto border-x justify-between">
+  <a routerLink="home">Ecommerce Store</a>
+  <button class="mat-icon-button" [matMenuTriggerFor]="menu">
+    <mat-icon [matBadge]="1" matBadgeColor="warn">shopping_cart</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <div class="p-3 divide-y divide-solid">
+      <div class="pb-3 flex justify-between">
+        <span class="mr-16"> 1 items </span>
+        <a routerLink="cart">View Cart</a>
+      </div>
+    </div>
+  </mat-menu>
+</mat-toolbar>
