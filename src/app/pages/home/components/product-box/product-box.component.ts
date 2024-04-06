@@ -10,6 +10,8 @@ export class ProductBoxComponent {
   @Input() fullWidthMode = false;
   @Input() product: Product | undefined;
   @Output() addToCart = new EventEmitter();
+
+
   // product: Product | undefined = {
   //   id: 1,
   //   title: 'Snickers',
