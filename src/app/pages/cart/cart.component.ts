@@ -72,12 +72,12 @@ export class CartComponent {
 
   onCheckout(): void {
     this.http
-      .post('http://localhost:4242/checkout', {
+      .post('https://angular-ecom-backend-payment.vercel.app/checkout', {
         items: this.cart.items,
       })
       .subscribe(async (res: any) => {
         let stripe = await loadStripe(
-          'add_your_public_key'
+          'pk_test_51Owo0NSCXLBamyqZlfUF3wbqr23XqAqvaFX7CIOIwG2l7RgZUxn1M9Mr661LGLGDScKeepODD21VXLZaLEwBjPyT00ZCBhNyzX'
         );
         stripe?.redirectToCheckout({
           sessionId: res.id,
